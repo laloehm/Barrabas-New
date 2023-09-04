@@ -52,7 +52,7 @@
                     <h2 class="text-center title">SERVICIOS</h2>
                 </div>
                 <div class="col-lg-8 mt-5 mt-lg-0 p-0 d-flex align-items-center justify-content-center flex-column">
-                    <div class="owl-carousel">
+                    <div class="owl-carousel owl-carousel_servicios">
                         <div> <img src="images/cuadro1.svg" class="img-fluid" alt=""></div>
                         <div> <img src="images/cuadro2.svg" class="img-fluid" alt=""></div>
                         <div> <img src="images/cuadro3.svg" class="img-fluid" alt=""></div>
@@ -60,11 +60,37 @@
                         <div> <img src="images/cuadro5.svg" class="img-fluid" alt=""></div>
                     </div>
                     <div class="btns">
-                        <div class="customNextBtn"><img src="images/Next.png" class="img-fluid icon_next" alt=""></div>
+                        <div class="customNextBtnServicios"><img src="images/Next.png" class="img-fluid icon_next"
+                                alt=""></div>
                     </div>
                 </div>
             </div>
             <img src="images/mano-responsive.png" class="img-fluid mano-responsive d-block d-lg-none" alt="">
+        </section>
+        <section class="proyectos py-4">
+            <div class="row px-3 px-md-0 bg-danger align-items-center">
+                <div class="col-lg-4 p-0">
+                    <h2 class="text-center title"><span>GALERÍA</span> PROYECTOS</h2>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0 p-0 d-flex align-items-center justify-content-center flex-column">
+                    <div class="owl-carousel owl-carousel_proyectos">
+                        <div> <img src="images/img_carrusel1.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel2-01.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel3.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel4-01.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel5.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel6.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel7.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel8.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel9.png" class="img-fluid" alt=""></div>
+                        <div> <img src="images/img_carrusel10.png" class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="btns">
+                        <div class="customNextBtnproyectos"><img src="images/Next.png" class="img-fluid icon_next"
+                                alt=""></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="contacto">
             <div class="row py-lg-5">
@@ -260,7 +286,7 @@
         <script src="js/owl.carousel.js"></script>
         <script>
             $(document).ready(function () {
-                var owl = $('.owl-carousel');
+                var owl = $('.owl-carousel_servicios');
                 $('.owl-carousel').owlCarousel({
                     loop: true,
                     navigation: true,
@@ -277,8 +303,29 @@
                 });
 
                 // Custom Button
-                $('.customNextBtn').click(function () {
+                $('.customNextBtnServicios').click(function () {
                     owl.trigger('next.owl.carousel');
+                });
+
+                var owl_2 = $('.owl-carousel_proyectos');
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    navigation: true,
+                    margin: 10,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1.3
+                        },
+                        600: {
+                            items: 2.3
+                        }
+                    }
+                });
+
+                // Custom Button
+                $('.customNextBtnproyectos').click(function () {
+                    owl_2.trigger('next.owl.carousel');
                 });
             });
         </script>

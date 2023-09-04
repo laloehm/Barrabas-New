@@ -28,9 +28,9 @@ h2 {
     font-family: 'Cocogoce', serif;
 }
 
-h2 span {
+/* h2 span {
     font-family: 'Valencia', serif;
-}
+} */
 
 p,
 a {
@@ -145,13 +145,24 @@ div {
     height: 25px;
 }
 
-.servicios img.icon_next {
+.servicios img.icon_next,
+.proyectos img.icon_next {
     width: 40px;
     display: block;
     margin-top: 1rem;
     margin-left: auto;
     margin-right: 3rem;
     cursor: pointer;
+}
+
+.proyectos h2 {
+    font-size: 3rem;
+}
+
+.proyectos span {
+    display: block;
+    font-size: 3rem;
+    color: #9C6BD7;
 }
 
 .contacto {
